@@ -35,7 +35,7 @@ public class UserThread extends Thread{
 			Option.katalog=src.nextLine(); //pobiera sciezke
 												 
 			Option.latch.countDown(); //sygnal dla innych watkow, zeby ruszyly
-
+			Option.set_Broadcast_add();
 			Option.CBMessage = "CB" +" "+ Option.login +" "+ Option.TCPport; //wiadomosc do broadcastu tworzona	(kazdy klient, ktory dostanie taki komunikat dodaje do listy klientow te osobek)				
 			Methods.sendBroadcast(userSocket, Option.CBMessage);	//wyslanie broadcastu sendBroadcast(socket, message)
 			

@@ -60,6 +60,7 @@ public class Methods {
             DatagramPacket	packet = null;									
 			outBuf=message.getBytes();										
             
+			System.out.println(Option.myAddress);
 			packet = new DatagramPacket(outBuf, 0, outBuf.length, Option.myAddress,50000); //wyslanie broadacstu na port 50 000, bo nie jest zajety przez IANA
             socket.send(packet);
         }

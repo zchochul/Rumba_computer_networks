@@ -38,9 +38,11 @@ public final class Option {
     static Random rand = new Random();
     public static  int TCPport = rand.nextInt(10000) + 50000;   //losuje port TCP (na tym bedziemy sie laczyc)
 
+    public static void set_Broadcast_add()
     {
         try {
             myAddress =  getBroadcastAddrs().get(1);
+            System.out.println("Test");
         } catch (Exception e) {
             e.printStackTrace();
         }
